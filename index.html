@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FastFoodKu</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>🍔 FastFoodKu</h1>
+  </header>
+
+  <main>
+    <h2>Pilih Menu</h2>
+    
+    <section class="menu">
+      <!-- Burger Spesial -->
+      <div class="item">
+        <img src="burger.jpg" alt="Burger" />
+        <div>
+          <h3>Burger Spesial <span class="harga">Rp30.000</span></h3>
+          <p>
+            Ukuran:
+            <input type="radio" name="size_burger" value="Small" /> Small
+            <input type="radio" name="size_burger" value="Medium" /> Medium
+            <input type="radio" name="size_burger" value="Large" /> Large
+          </p>
+          <p>
+            Topping:
+            <input type="checkbox" id="keju" /> Keju
+            <input type="checkbox" id="telur" /> Telur
+          </p>
+          <select id="qty_burger">
+            <option value="0">Jumlah 0</option>
+            <option value="1">Jumlah 1</option>
+            <option value="2">Jumlah 2</option>
+          </select>
+          <button onclick="tambahKeranjang('Burger Spesial', 30000, 'qty_burger')">Tambah ke Keranjang</button>
+        </div>
+      </div>
+
+      <!-- Kentang Goreng -->
+      <div class="item">
+        <img src="kentanggoreng.jpg" alt="Kentang Goreng" />
+        <div>
+          <h3>Kentang Goreng <span class="harga">Rp15.000</span></h3>
+          <p>
+            Ukuran:
+            <input type="radio" name="size_kentang" /> Small
+            <input type="radio" name="size_kentang" /> Medium
+            <input type="radio" name="size_kentang" /> Large
+          </p>
+          <select id="qty_kentang">
+            <option value="0">Jumlah 0</option>
+            <option value="1">Jumlah 1</option>
+            <option value="2">Jumlah 2</option>
+          </select>
+          <button onclick="tambahKeranjang('Kentang Goreng', 15000, 'qty_kentang')">Tambah ke Keranjang</button>
+        </div>
+      </div>
+
+      <!-- Ayam Goreng -->
+      <div class="item">
+        <img src="ayamgoreng.jpg" alt="Ayam Goreng" />
+        <div>
+          <h3>Ayam Goreng <span class="harga">Rp25.000</span></h3>
+          <p>
+            Ukuran:
+            <input type="radio" name="size_ayam" /> Small
+            <input type="radio" name="size_ayam" /> Medium
+            <input type="radio" name="size_ayam" /> Large
+          </p>
+          <select id="qty_ayam">
+            <option value0="0">Jumlah 0</option>
+            <option value="1">Jumlah 1</option>
+            <option value="2">Jumlah 2</option>
+          </select>
+          <button onclick="tambahKeranjang('Ayam Goreng', 25000, 'qty_ayam')">Tambah ke Keranjang</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Form Pemesanan -->
+    <aside>
+      <h3>Nama Pemesan</h3>
+      <input type="text" id="nama" placeholder="Nama Pemesan" /><br />
+      <input type="text" id="alamat" placeholder="Alamat Lengkap" /><br />
+      <input type="text" id="telepon" placeholder="Nomor Telepon" /><br />
+      <button onclick="pesan()">Pesan Sekarang</button>
+      <button onclick="resetForm()">Reset Form</button>
+    </aside>
+
+    <section id="keranjang"></section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
